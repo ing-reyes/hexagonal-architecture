@@ -1,0 +1,16 @@
+services:
+  mongodb_hexa:
+    image: mongo:6.0.6
+    container_name: mongodb_hexa
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_DB_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_DB_PASSWORD}
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_architecture_data:/data/db
+
+volumes:
+  mongodb_architecture_data:
+    name: mongodb_architecture_data
