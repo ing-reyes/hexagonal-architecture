@@ -1,5 +1,5 @@
 import { CreateUserDTO, UserResponseDTO, UpdateUserDTO } from '../../entities/user.entity';
-import { PaginationDTO } from '../../../common/dtos/pagination';
+import { PaginationDTO } from '../../interfaces';
 import { ApiAllResponse, ApiOneResponse } from '../../interfaces/api-response.interface';
 
 export interface UserDatasourcePort {
