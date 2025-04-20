@@ -1,7 +1,7 @@
-import { AuthResponseDTO, SignInDTO, SignUpDTO } from "../../domain/entities";
-import { ApiOneResponse } from "../../domain/interfaces";
-import { AuthServicePort } from "../../domain/ports/primary";
-import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from "../use-cases/auth";
+import { AuthResponseDTO, SignInDTO, SignUpDTO } from "../../../domain/entities";
+import { ApiOneResponse } from "../../../domain/interfaces";
+import { AuthServicePort } from "../../../domain/ports/primary";
+import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from "../../use-cases/auth";
 
 
 export class AuthService implements AuthServicePort {

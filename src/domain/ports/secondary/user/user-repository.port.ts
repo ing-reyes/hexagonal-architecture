@@ -1,8 +1,8 @@
-import { CreateUserDTO, UserResponseDTO, UpdateUserDTO } from '../../entities/user.entity';
-import { PaginationDTO } from '../../../common/dtos/pagination';
-import { ApiAllResponse, ApiOneResponse } from '../../interfaces/api-response.interface';
+import { CreateUserDTO, UserResponseDTO, UpdateUserDTO } from '../../../entities/user.entity';
+import { PaginationDTO } from '../../../interfaces';
+import { ApiAllResponse, ApiOneResponse } from '../../../interfaces/api-response.interface';
 
-export interface UserServicePort {
+export interface UserRepositoryPort {
     create(createUserDto: CreateUserDTO): Promise<ApiOneResponse<UserResponseDTO>>;
     findAll(paginationDTO: PaginationDTO): Promise<ApiAllResponse<UserResponseDTO>>;
     findOneById(id: string): Promise<ApiOneResponse<UserResponseDTO | null>>;

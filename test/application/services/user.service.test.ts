@@ -1,4 +1,4 @@
-import { UserService } from '../../../src/application/services/user.service';
+import { UserService } from '../../../src/application/services';
 import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from '../../../src/application/use-cases/user';
 import { CreateUserDTO, UserResponseDTO } from '../../../src/domain/entities';
 import { HttpStatus, UserRole } from '../../../src/domain/enums';

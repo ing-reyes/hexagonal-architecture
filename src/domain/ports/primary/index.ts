@@ -1,2 +1,2 @@
-export * from './auth-service.port';
-export * from './user-service.port';
+export * from './auth/auth-service.port';
+export * from './user/user-service.port';
