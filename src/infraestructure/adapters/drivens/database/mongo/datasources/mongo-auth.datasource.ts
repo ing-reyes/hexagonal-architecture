@@ -7,7 +7,7 @@ import { ManagerError } from "../../../../../../common/errors";
 import { SignInDTO, AuthResponseDTO, SignUpDTO, AuthToken } from "../../../../../../domain/entities";
 import { UserModel } from "../models";
 
-export class MongoAuthDatasource implements AuthDatasourcePort {
+export class MongoAuthDatasourceAdapter implements AuthDatasourcePort {
 
     constructor(
         private readonly jwtConfig: JwtConfig,

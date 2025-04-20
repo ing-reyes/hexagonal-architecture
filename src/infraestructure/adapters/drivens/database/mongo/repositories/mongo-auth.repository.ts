@@ -2,7 +2,7 @@ import { SignInDTO, AuthResponseDTO, SignUpDTO } from "../../../../../../domain/
 import { ApiOneResponse } from "../../../../../../domain/interfaces";
 import { AuthDatasourcePort, AuthRepositoryPort } from "../../../../../../domain/ports/secondary";
 
-export class MongoAuthRepository implements AuthRepositoryPort {
+export class MongoAuthRepositoryAdapter implements AuthRepositoryPort {
     constructor(
         private readonly authDatasource: AuthDatasourcePort,
     ) { }
