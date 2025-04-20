@@ -1,13 +1,13 @@
 import { JwtConfig, VerifyToken } from "../../../../../common/config";
 import { ManagerError } from "../../../../../common/errors";
-import { AuthResponseDTO, AuthToken, SignInDTO, SignUpDTO, User, UserRole } from "../../../../../domain/entities";
-import { HttpStatus } from "../../../../../domain/enums";
+import { AuthResponseDTO, AuthToken, SignInDTO, SignUpDTO, User } from "../../../../../domain/entities";
+import { HttpStatus, UserRole } from "../../../../../domain/enums";
 import { ApiOneResponse } from "../../../../../domain/interfaces";
 import { AuthDatasourcePort } from "../../../../../domain/ports/secondary";
 import { AuthMapper } from "../mongo/mappers";
 
 
-export class InMemoryAuthDatasource implements AuthDatasourcePort {
+export class InMemoryAuthDatasourceAdapter implements AuthDatasourcePort {
 
     constructor(
         private readonly jwtConfig: JwtConfig,

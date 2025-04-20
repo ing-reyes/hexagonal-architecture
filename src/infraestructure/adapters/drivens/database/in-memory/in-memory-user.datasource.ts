@@ -1,10 +1,11 @@
 import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../domain/interfaces";
-import { CreateUserDTO, UpdateUserDTO, User, UserResponseDTO, UserRole } from "../../../../../domain/entities";
+import { CreateUserDTO, UpdateUserDTO, User, UserResponseDTO } from "../../../../../domain/entities";
 import { HttpStatus } from "../../../../../domain/enums/http-status.enum";
 import { UserDatasourcePort } from "../../../../../domain/ports/secondary";
 import { UserMapper } from "../mongo/mappers";
+import { UserRole } from "../../../../../domain/enums";
 
-export class InMemoryUserDatasource implements UserDatasourcePort {
+export class InMemoryUserDatasourceAdapter implements UserDatasourcePort {
     private readonly users: User[] = [
         { id: '1', name: 'name1', email: 'email1@google.com', password: '123456', roles: [UserRole.USER], isActive: true, createdAt: new Date(), updatedAt: new Date() },
         { id: '2', name: 'name2', email: 'email2@google.com', password: '123456', roles: [UserRole.USER], isActive: true, createdAt: new Date(), updatedAt: new Date() },
