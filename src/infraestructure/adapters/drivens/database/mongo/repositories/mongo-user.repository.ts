@@ -2,7 +2,7 @@ import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../..
 import { CreateUserDTO, UserResponseDTO, UpdateUserDTO } from "../../../../../../domain/entities";
 import { UserDatasourcePort, UserRepositoryPort } from "../../../../../../domain/ports/secondary";
 
-export class MongoUserRepository implements UserRepositoryPort {
+export class MongoUserRepositoryAdapter implements UserRepositoryPort {
     constructor(
         private readonly userDatasource: UserDatasourcePort
     ) { }

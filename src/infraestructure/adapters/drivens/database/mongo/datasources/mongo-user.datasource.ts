@@ -7,7 +7,7 @@ import { UserDatasourcePort } from "../../../../../../domain/ports/secondary";
 import { UserMapper } from "../mappers";
 import { UserModel } from "../models";
 
-export class MongoUserDatasource implements UserDatasourcePort {
+export class MongoUserDatasourceAdapter implements UserDatasourcePort {
 
     constructor(
         private readonly bcryptAdapter: BcryptAdapter
