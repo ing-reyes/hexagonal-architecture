@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage"
   },
-  "keywords": [],
+  "keywords": ["hexagonal", "architecture", "typescript", "nodejs", "express", "mongodb", "jest"],
   "author": "Luis Reyes",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "email": "luis.s.raider.3@gmail.com"
   },
   "license": "ISC",
-  "description": "",
+  "description": "Hexagonal architecture example with TypeScript, Node.js, Express, MongoDB, and Jest",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
