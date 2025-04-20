@@ -1,9 +1,9 @@
-import { AuthService } from '../../../src/application/services';
-import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from '../../../src/application/use-cases/auth';
-import { SignInDTO } from '../../../src/domain/entities';
-import { AuthResponseDTO, SignUpDTO } from '../../../src/domain/entities/auth.entity';
-import { HttpStatus, UserRole } from '../../../src/domain/enums';
-import { ApiOneResponse } from '../../../src/domain/interfaces';
+import { AuthService } from '../../../../src/application/services';
+import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from '../../../../src/application/use-cases/auth';
+import { SignInDTO } from '../../../../src/domain/entities';
+import { AuthResponseDTO, SignUpDTO } from '../../../../src/domain/entities/auth.entity';
+import { HttpStatus, UserRole } from '../../../../src/domain/enums';
+import { ApiOneResponse } from '../../../../src/domain/interfaces';
 describe("AuthService", () => {
     it("should be defined", () => {
 

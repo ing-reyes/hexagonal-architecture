@@ -1,8 +1,8 @@
-import { UserService } from '../../../src/application/services';
-import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from '../../../src/application/use-cases/user';
-import { CreateUserDTO, UserResponseDTO } from '../../../src/domain/entities';
-import { HttpStatus, UserRole } from '../../../src/domain/enums';
-import { ApiAllResponse, ApiOneResponse } from '../../../src/domain/interfaces';
+import { UserService } from '../../../../src/application/services';
+import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from '../../../../src/application/use-cases/user';
+import { CreateUserDTO, UserResponseDTO } from '../../../../src/domain/entities';
+import { HttpStatus, UserRole } from '../../../../src/domain/enums';
+import { ApiAllResponse, ApiOneResponse } from '../../../../src/domain/interfaces';
 describe("UserService", () => {
 
     it("should be defined", () => {
