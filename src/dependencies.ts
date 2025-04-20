@@ -6,7 +6,7 @@ import { AuthService, UserService } from "./application/services";
 import { BcryptAdapter, envs, JwtConfig } from "./common/config";
 import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from "./application/use-cases/user";
 import { Handler } from "./common/errors";
-import { MongoAuthDatasource, MongoAuthRepository, MongoUserDatasource, MongoUserRepository } from "./infraestructure/adapters/drivens/database/mongo";
+import { MongoAuthDatasourceAdapter, MongoAuthRepositoryAdapter, MongoUserDatasourceAdapter, MongoUserRepositoryAdapter } from "./infraestructure/adapters/drivens/database/mongo";
 import { MongoDB } from "./common/data";
 import { PaginationMiddleware, ValidateIdMiddleware } from "./common/middlewares";
 import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from "./application/use-cases/auth";
@@ -14,14 +14,14 @@ import { RefreshTokenUseCase, SignInUseCase, SignUpUseCase } from "./application
 export const bcryptAdapter = new BcryptAdapter();
 export const jwtConfig = new JwtConfig();
 //* -----------------User---------------------------------------------
-export const userDatasource = new MongoUserDatasource(bcryptAdapter)
-export const mongoUserRepository = new MongoUserRepository(userDatasource)
+export const userDatasource = new MongoUserDatasourceAdapter(bcryptAdapter)
+export const mongoUserRepositoryAdapter = new MongoUserRepositoryAdapter(userDatasource)
 
-export const createUserUseCase = new CreateUserUseCase(mongoUserRepository)
-export const findAllUsersUseCase = new FindAllUsersUseCase(mongoUserRepository)
-export const findOneUserByIdUseCase = new FindOneUserByIdUseCase(mongoUserRepository)
-export const updateUserUseCase = new UpdateUserUseCase(mongoUserRepository)
-export const removeUserUseCase = new RemoveUserUseCase(mongoUserRepository)
+export const createUserUseCase = new CreateUserUseCase(mongoUserRepositoryAdapter)
+export const findAllUsersUseCase = new FindAllUsersUseCase(mongoUserRepositoryAdapter)
+export const findOneUserByIdUseCase = new FindOneUserByIdUseCase(mongoUserRepositoryAdapter)
+export const updateUserUseCase = new UpdateUserUseCase(mongoUserRepositoryAdapter)
+export const removeUserUseCase = new RemoveUserUseCase(mongoUserRepositoryAdapter)
 
 export const userService = new UserService(
     createUserUseCase,
@@ -41,12 +41,12 @@ export const userRoutes = new UserRoutes(userController, userMiddleware, paginat
 
 //* -----------------Auth---------------------------------------------
 
-export const mongoAuthDatasource = new MongoAuthDatasource(jwtConfig, bcryptAdapter);
-export const mongoAuthRepository = new MongoAuthRepository(mongoAuthDatasource);
+export const mongoAuthDatasourceAdapter = new MongoAuthDatasourceAdapter(jwtConfig, bcryptAdapter);
+export const mongoAuthRepositoryAdapter = new MongoAuthRepositoryAdapter(mongoAuthDatasourceAdapter);
 
-export const signInUseCase = new SignInUseCase(mongoAuthRepository);
-export const signUpUseCase = new SignUpUseCase(mongoAuthRepository);
-export const refreshTokenUseCase = new RefreshTokenUseCase(mongoAuthRepository);
+export const signInUseCase = new SignInUseCase(mongoAuthRepositoryAdapter);
+export const signUpUseCase = new SignUpUseCase(mongoAuthRepositoryAdapter);
+export const refreshTokenUseCase = new RefreshTokenUseCase(mongoAuthRepositoryAdapter);
 
 export const authService = new AuthService(signInUseCase, signUpUseCase, refreshTokenUseCase);
 export const authController = new AuthController(authService, handler);
