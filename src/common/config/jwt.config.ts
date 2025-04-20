@@ -42,4 +42,14 @@ export class JwtConfig {
 
         return this.generateToken({ id: payload.id, roles: payload.roles });
     }
+
+    async verifyTokenExpired(token: string): Promise<boolean> {
+        const payload = await this.verifyToken<VerifyToken>(token);
+        if (!payload) return Promise.resolve(false);
+
+        if( new Date().getTime() < payload.exp ) {
+            return Promise.resolve(true);
+        }
+        return Promise.resolve(false);
+    }
 }
