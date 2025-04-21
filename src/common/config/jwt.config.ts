@@ -45,11 +45,10 @@ export class JwtConfig {
 
     async verifyTokenExpired(token: string): Promise<boolean> {
         const payload = await this.verifyToken<VerifyToken>(token);
-        if (!payload) return Promise.resolve(false);
-
-        if( new Date().getTime() < payload.exp ) {
-            return Promise.resolve(true);
-        }
-        return Promise.resolve(false);
+        if (!payload) return false;
+    
+        // We normalize time units to avoid errors
+        const currentTimeInSeconds = Math.floor(Date.now() / 1000);
+        return currentTimeInSeconds >= payload.exp;
     }
 }
