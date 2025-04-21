@@ -3,37 +3,35 @@ import { type User } from "../../../../../../domain/entities";
 import { UserRole } from "../../../../../../domain/enums";
 
 export interface UserDocument extends Document, Omit<User, "id"> {
-  // El _id de MongoDB se mapea a id en la entidad
+  // id: string; // Mongoose automatically adds an _id field, but we can use it as id
 }
 
 const userSchema = new Schema<UserDocument>(
   {
     name: {
       type: String,
-      required: [true, "El nombre es requerido"],
+      required: [true, "Name is required"],
       trim: true,
-      minlength: [2, "El nombre debe tener al menos 2 caracteres"],
+      minlength: [2, "Name must have at least 2 characters"],
     },
     email: {
       type: String,
-      required: [true, "El email es requerido"],
+      required: [true, "Email is required"],
       unique: true,
       trim: true,
       lowercase: true,
-      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, "Por favor ingresa un email válido"],
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, "Please enter a valid email address"],
     },
     password: {
       type: String,
-      required: [true, "La contraseña es requerida"],
-      minlength: [8, "La contraseña debe tener al menos 8 caracteres"],
+      required: [true, "Password is required"],
+      minlength: [8, "Password must have at least 8 characters"],
     },
-
     roles: {
       type: [String],
       enum: Object.values(UserRole),
       default: [UserRole.USER]
     },
-
     isActive: {
       type: Boolean,
       default: true
