@@ -43,6 +43,7 @@ export class JwtConfig {
         return this.generateToken({ id: payload.id, roles: payload.roles });
     }
 
+    // Check if a JWT token is expired by verifying it and comparing the expiration time
     async verifyTokenExpired(token: string): Promise<boolean> {
         const payload = await this.verifyToken<VerifyToken>(token);
         if (!payload) return false;
