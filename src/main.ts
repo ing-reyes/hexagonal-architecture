@@ -1,5 +1,5 @@
-import { envs } from './common/config';
-import { appServer, mongoDB } from './dependencies';
+import { appServer, mongoDB } from './container';
+import { envs } from './shared/config';
 
 async function boostrap() {
     await mongoDB.connect({
