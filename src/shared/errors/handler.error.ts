@@ -1,5 +1,6 @@
 import { Response } from "express";
 import { ManagerError } from "./manager.error";
+import { HttpStatus } from "../enums";
 
 export class Handler {
     error(error: unknown, res: Response) {
@@ -9,7 +10,7 @@ export class Handler {
         }
 
         if (error instanceof Error) {
-            res.status(500).json({ statusCode: 500, statusMsg: 'INTERNAL_SERVER_ERROR', error: error.message });
+            res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ statusCode: HttpStatus.INTERNAL_SERVER_ERROR, statusMsg: 'INTERNAL_SERVER_ERROR', error: error.message });
         }
     }
 }
