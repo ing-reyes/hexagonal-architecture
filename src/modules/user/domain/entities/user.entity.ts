@@ -1,4 +1,4 @@
-import { UserRole } from "../../../../common/enums";
+import { UserRole } from "../../../../shared/enums";
 
 export interface CreateUserDTO {
     name: string;
