@@ -6,14 +6,14 @@ import { ApiAllResponse, ApiOneResponse, PaginationDTO, UserResponseDTO } from "
 
 export class UserService implements UserServicePort {
     constructor(
-        private readonly createUseUseCase: CreateUserUseCase,
+        private readonly createUserUseCase: CreateUserUseCase,
         private readonly findAllUsersUseCase: FindAllUsersUseCase,
         private readonly findOneUserByIdUseCase: FindOneUserByIdUseCase,
-        private readonly updateUseUseCase: UpdateUserUseCase,
+        private readonly updateUserUseCase: UpdateUserUseCase,
         private readonly removeUserUseCase: RemoveUserUseCase,
     ) { }
     create(createUserDto: CreateUserDTO): Promise<ApiOneResponse<UserResponseDTO>> {
-        return this.createUseUseCase.execute(createUserDto);
+        return this.createUserUseCase.execute(createUserDto);
     }
     findAll(paginationDTO: PaginationDTO): Promise<ApiAllResponse<UserResponseDTO>> {
         return this.findAllUsersUseCase.execute(paginationDTO);
@@ -22,7 +22,7 @@ export class UserService implements UserServicePort {
         return this.findOneUserByIdUseCase.execute(id);
     }
     update(id: string, updateUserDTO: UpdateUserDTO): Promise<ApiOneResponse<UserResponseDTO | null>> {
-        return this.updateUseUseCase.execute(id, updateUserDTO);
+        return this.updateUserUseCase.execute(id, updateUserDTO);
     }
     remove(id: string): Promise<ApiOneResponse<UserResponseDTO | null>> {
         return this.removeUserUseCase.execute(id);
