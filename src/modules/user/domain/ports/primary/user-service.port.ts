@@ -1,5 +1,5 @@
-import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../common/interfaces";
-import { UserResponseDTO } from "../../../../../common/interfaces/user.interface";
+import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../shared/interfaces";
+import { UserResponseDTO } from "../../../../../shared/interfaces/user.interface";
 import { CreateUserDTO, UpdateUserDTO } from "../../entities";
 
 
