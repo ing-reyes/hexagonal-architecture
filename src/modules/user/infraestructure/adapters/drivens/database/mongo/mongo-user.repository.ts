@@ -1,5 +1,5 @@
-import { ApiAllResponse, ApiOneResponse, PaginationDTO, UserResponseDTO } from "../../../../../../../shared/interfaces";
-import { CreateUserDTO, UpdateUserDTO } from "../../../../../domain/entities";
+import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../../../shared/interfaces";
+import { CreateUserDTO, UpdateUserDTO, UserResponseDTO } from "../../../../../domain/entities";
 import { UserDatasourcePort, UserRepositoryPort } from "../../../../../domain/ports/secondary";
 
 export class MongoUserRepositoryAdapter implements UserRepositoryPort {

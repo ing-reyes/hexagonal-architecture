@@ -1,6 +1,5 @@
 import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../shared/interfaces";
-import { UserResponseDTO } from "../../../../../shared/interfaces/user.interface";
-import { CreateUserDTO, UpdateUserDTO } from "../../entities";
+import { CreateUserDTO, UpdateUserDTO, UserResponseDTO } from "../../entities";
 
 
 export interface UserRepositoryPort {

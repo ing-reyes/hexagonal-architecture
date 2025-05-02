@@ -1,8 +1,8 @@
 
 import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from "../use-cases";
 import { UserServicePort } from "../../domain/ports/primary";
-import { CreateUserDTO, UpdateUserDTO } from "../../domain/entities";
-import { ApiAllResponse, ApiOneResponse, PaginationDTO, UserResponseDTO } from "../../../../shared/interfaces";
+import { CreateUserDTO, UpdateUserDTO, UserResponseDTO } from "../../domain/entities";
+import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../shared/interfaces";
 
 export class UserService implements UserServicePort {
     constructor(

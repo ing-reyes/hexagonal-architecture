@@ -1,6 +1,6 @@
 import { HttpStatus, UserRole } from "../../../../../../../shared/enums";
-import { ApiAllResponse, ApiOneResponse, PaginationDTO, User, UserResponseDTO } from "../../../../../../../shared/interfaces";
-import { CreateUserDTO, UpdateUserDTO } from "../../../../../domain/entities";
+import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../../../shared/interfaces";
+import { CreateUserDTO, UpdateUserDTO, User, UserResponseDTO } from "../../../../../domain/entities";
 import { UserDatasourcePort } from "../../../../../domain/ports/secondary";
 import { UserMapper } from "../mongo";
 

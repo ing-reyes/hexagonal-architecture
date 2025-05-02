@@ -3,8 +3,8 @@ import { BcryptAdapter } from "../../../../../../../shared/config";
 import { UserModel } from "../../../../../../../shared/data";
 import { HttpStatus } from "../../../../../../../shared/enums";
 import { ManagerError } from "../../../../../../../shared/errors";
-import { ApiAllResponse, ApiOneResponse, PaginationDTO, UserResponseDTO } from "../../../../../../../shared/interfaces";
-import { CreateUserDTO, UpdateUserDTO } from "../../../../../domain/entities";
+import { ApiAllResponse, ApiOneResponse, PaginationDTO } from "../../../../../../../shared/interfaces";
+import { CreateUserDTO, UpdateUserDTO, UserResponseDTO } from "../../../../../domain/entities";
 import { UserDatasourcePort } from "../../../../../domain/ports/secondary";
 import { UserMapper } from "./user.mapper";
 

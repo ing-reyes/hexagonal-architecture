@@ -2,7 +2,8 @@
 import { JwtConfig, VerifyToken } from "../../../../../../../shared/config";
 import { HttpStatus, UserRole } from "../../../../../../../shared/enums";
 import { ManagerError } from "../../../../../../../shared/errors";
-import { ApiOneResponse, User } from "../../../../../../../shared/interfaces";
+import { ApiOneResponse } from "../../../../../../../shared/interfaces";
+import { User } from "../../../../../../user/domain/entities";
 import { AuthResponseDTO, AuthToken, SignInDTO, SignUpDTO } from "../../../../../domain/entities";
 import { AuthDatasourcePort } from "../../../../../domain/ports/secondary";
 import { AuthMapper } from "../mongo";

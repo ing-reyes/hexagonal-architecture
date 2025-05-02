@@ -1,5 +1,6 @@
 import { RemoveUserUseCase } from "../../../../../src/modules/user/application/use-cases";
-import { ApiOneResponse, UserResponseDTO } from "../../../../../src/shared/interfaces";
+import { UserResponseDTO } from "../../../../../src/modules/user/domain/entities";
+import { ApiOneResponse } from "../../../../../src/shared/interfaces";
 
 
 

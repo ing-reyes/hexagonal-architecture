@@ -1,6 +1,7 @@
 import { FindOneUserByIdUseCase } from "../../../../../src/modules/user/application/use-cases";
+import { UserResponseDTO } from "../../../../../src/modules/user/domain/entities";
 import { UserRole } from "../../../../../src/shared/enums";
-import { ApiOneResponse, UserResponseDTO } from "../../../../../src/shared/interfaces";
+import { ApiOneResponse } from "../../../../../src/shared/interfaces";
 
 
 

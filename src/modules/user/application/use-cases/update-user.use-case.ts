@@ -1,5 +1,5 @@
-import { ApiOneResponse, UserResponseDTO } from "../../../../shared/interfaces";
-import { UpdateUserDTO } from "../../domain/entities";
+import { ApiOneResponse } from "../../../../shared/interfaces";
+import { UpdateUserDTO, UserResponseDTO } from "../../domain/entities";
 import { UserRepositoryPort } from "../../domain/ports/secondary";
 
 interface UseCase {

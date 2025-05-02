@@ -1,5 +1,5 @@
-import { ApiOneResponse, UserResponseDTO } from "../../../../shared/interfaces";
-import { CreateUserDTO } from "../../domain/entities";
+import { ApiOneResponse } from "../../../../shared/interfaces";
+import { CreateUserDTO, UserResponseDTO } from "../../domain/entities";
 import { UserRepositoryPort } from "../../domain/ports/secondary";
 
 

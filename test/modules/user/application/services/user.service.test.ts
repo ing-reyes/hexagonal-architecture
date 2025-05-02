@@ -1,7 +1,7 @@
 import { CreateUserUseCase, FindAllUsersUseCase, FindOneUserByIdUseCase, RemoveUserUseCase, UpdateUserUseCase } from '../../../../../src/modules/user/application/use-cases';
 import { UserService } from '../../../../../src/modules/user/application/services';
-import { CreateUserDTO } from '../../../../../src/modules/user/domain/entities';
-import { ApiAllResponse, ApiOneResponse, UserResponseDTO } from '../../../../../src/shared/interfaces';
+import { CreateUserDTO, UserResponseDTO } from '../../../../../src/modules/user/domain/entities';
+import { ApiAllResponse, ApiOneResponse } from '../../../../../src/shared/interfaces';
 import { HttpStatus, UserRole } from '../../../../../src/shared/enums';
 
 describe("UserService", () => {

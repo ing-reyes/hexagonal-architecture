@@ -1,6 +1,6 @@
 import mongoose, { type Document, Schema } from "mongoose"
-import { type User } from "../../../interfaces";
 import { UserRole } from "../../../enums";
+import { type User } from "../../../../modules/user/domain/entities";
 
 export interface UserDocument extends Document, Omit<User, "id"> {
   // id: string; // Mongoose automatically adds an _id field, but we can use it as id

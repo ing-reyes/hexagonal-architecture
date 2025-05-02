@@ -1,7 +1,7 @@
-import { CreateUserDTO, UpdateUserDTO } from '../../../../../../../src/modules/user/domain/entities';
+import { CreateUserDTO, UpdateUserDTO, UserResponseDTO } from '../../../../../../../src/modules/user/domain/entities';
 import { MongoUserRepositoryAdapter } from '../../../../../../../src/modules/user/infraestructure/adapters/drivens/database/mongo/mongo-user.repository';
 import { HttpStatus, UserRole } from '../../../../../../../src/shared/enums';
-import { ApiAllResponse, ApiOneResponse, Metadata, PaginationDTO, UserResponseDTO } from '../../../../../../../src/shared/interfaces';
+import { ApiAllResponse, ApiOneResponse, Metadata, PaginationDTO } from '../../../../../../../src/shared/interfaces';
 
 describe("MongoUserRepositoryAdapter", () => {
     

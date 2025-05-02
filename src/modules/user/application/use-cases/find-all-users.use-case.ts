@@ -1,4 +1,5 @@
-import { ApiAllResponse, PaginationDTO, UserResponseDTO } from "../../../../shared/interfaces";
+import { ApiAllResponse, PaginationDTO } from "../../../../shared/interfaces";
+import { UserResponseDTO } from "../../domain/entities";
 import { UserRepositoryPort } from "../../domain/ports/secondary";
 
 interface UseCase {
