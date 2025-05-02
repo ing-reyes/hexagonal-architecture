@@ -1,8 +1,8 @@
 import { BcryptAdapter } from '../../../../../../../src/shared/config/bcrypt.config';
 import { MongoUserDatasourceAdapter, UserMapper } from '../../../../../../../src/modules/user/infraestructure/adapters/drivens/database/mongo';
-import { CreateUserDTO } from '../../../../../../../src/modules/user/domain/entities';
+import { CreateUserDTO, UserResponseDTO } from '../../../../../../../src/modules/user/domain/entities';
 import { HttpStatus, UserRole } from '../../../../../../../src/shared/enums';
-import { ApiAllResponse, ApiOneResponse, Metadata, PaginationDTO, UserResponseDTO } from '../../../../../../../src/shared/interfaces';
+import { ApiAllResponse, ApiOneResponse, Metadata, PaginationDTO } from '../../../../../../../src/shared/interfaces';
 import { UserModel } from '../../../../../../../src/shared/data';
 import { ManagerError } from '../../../../../../../src/shared/errors';
 
